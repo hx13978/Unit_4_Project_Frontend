@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
+import Activities from "./Activities";
 
 const backendUrl =
   process.env.REACT_APP_BACKEND_URL || "http://localhost:3000/activities";
@@ -31,7 +32,11 @@ export default class App extends Component {
     return (
       <div className="App">
         <h1>All Activities</h1>
-  
+
+        <Route path="/" render={(routerProps) =>
+            <Activities {...this.state} {...routerProps} />
+          }>
+        </Route>
       </div>
     );
   }
