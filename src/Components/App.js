@@ -18,6 +18,10 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+    this.getActivities();
+  }
+
+  getActivities = () => {
     axios.get(`${backendUrl}`).then((response) => {
       this.setState({
         activities: response.data.activities,
@@ -42,6 +46,9 @@ export default class App extends Component {
     });
   }
   
+  deleteActivity = (activityId) => {
+    axios.delete(`${backendUrl}/${activityId}`).then((response) => {this.getActivities()});
+  }
 
   render() {
         console.log(this.state.activities);
@@ -52,7 +59,8 @@ export default class App extends Component {
         <Route path="/" render={(routerProps) =>
             <Activities 
             activities={this.state.activities}
-            addActivity={this.addActivity} 
+            addActivity={this.addActivity}
+            deleteActivity={this.deleteActivity}
             />
           }>
         </Route>
