@@ -25,6 +25,22 @@ export default class App extends Component {
     });
   }
 
+  addActivity = (e) => {
+    e.preventDefault();
+    axios.post(`${backendUrl}`, {
+      date: e.target.date.value,
+      name: e.target.name.value,
+      activity: e.target.activity.value,
+      time: e.target.time.value,
+    }).then((response) => {
+      
+      let activityArray = this.state.activities;
+      activityArray.push(response.data.activity);
+      this.setState({
+        activities: activityArray,
+      });
+    });
+  }
   
 
   render() {
@@ -34,7 +50,10 @@ export default class App extends Component {
         <h1>All Activities</h1>
 
         <Route path="/" render={(routerProps) =>
-            <Activities {...this.state} {...routerProps} />
+            <Activities 
+            activities={this.state.activities}
+            addActivity={this.addActivity} 
+            />
           }>
         </Route>
       </div>

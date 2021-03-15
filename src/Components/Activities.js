@@ -15,9 +15,17 @@ export default class Activities extends Component {
     });
     return (
       <div>
-        <h1>List of all activities</h1>
+       
         <ul>{activitiesList}</ul>
 
+        <h3>Create a New Activity</h3>
+        <form onSubmit={this.props.addActivity}>
+          <input type="text" name="date" placeholder="01/01/21" />
+          <input type="text" name="name" placeholder="John" />
+          <input type="text" name="activity" placeholder="Dr. Appt" />
+          <input type="text" name="time" placeholder="3-4pm" />          
+          <input type="submit" value="Add Activity" />
+        </form>
       </div>
     );
   }
