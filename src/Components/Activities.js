@@ -12,14 +12,13 @@ export default class Activities extends Component {
     let list = this.props.activities
 
     list.sort(function(a,b) {
-      console.log(a.date)
       a = a.date.split('/').reverse().join('');
       console.log(b.date)
       b = b.date.split('/').reverse().join('');
       return a > b ? 1 : a < b ? -1 : 0;
-   
     })
-      console.log(list)
+    //console.log(list)
+
     let activitiesList = this.props.activities.map((activities) => {
       return (
         <li key={activities.id}>{activities.date}: {activities.name} {activities.activity} {activities.time}
