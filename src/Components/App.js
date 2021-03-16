@@ -3,6 +3,8 @@ import "./App.css";
 import { Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import Activities from "./Activities";
+import Header from './Header';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const backendUrl =
   process.env.REACT_APP_BACKEND_URL || "http://localhost:3000/activities";
@@ -51,11 +53,13 @@ export default class App extends Component {
   }
 
   render() {
-        console.log(this.state.activities);
+        //console.log(this.state.activities);
     return (
       <div className="App">
-        <h1>All Activities</h1>
-
+        <div className="header">
+          <Header />
+        </div>
+        <div>
         <Route path="/" render={(routerProps) =>
             <Activities 
             activities={this.state.activities}
@@ -64,6 +68,7 @@ export default class App extends Component {
             />
           }>
         </Route>
+        </div>
       </div>
     );
   }
