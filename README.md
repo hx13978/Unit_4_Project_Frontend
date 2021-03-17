@@ -15,6 +15,12 @@ Upon loading the website, the user will be able to view their current Activity L
 
 ### Deployed App
 
+- Heroku
+[project4-frontend-activitylist](https://project4-frontend-activitylist.herokuapp.com/)
+
+[project4-backend-activitylist](https://project4-backend-activity-list.herokuapp.com/)
+
+- GitHub
 [Family/User Activity Planner-Frontend](https://github.com/hx13978/Unit_4_Project_Frontend)
 
 [Family/User Activity Planner-Backend](https://github.com/hx13978/Unit_4_Project_Backend)
