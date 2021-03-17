@@ -36,7 +36,7 @@ export default class Activities extends Component {
         <div className="activityList">
           <h4 className="listHeader">Activity List</h4>
 
-          <ul>{activitiesList}</ul>
+          <ul className="displayActivities">{activitiesList}</ul>
         </div>
 
         <h5 className="createHeader">Create a New Activity</h5>

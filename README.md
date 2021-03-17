@@ -24,6 +24,11 @@ Upon loading the website, the user will be able to view their current Activity L
     - Header
     - Activities
 
+### User Stories and Wireframe
+
+[See User Stories Here](/planning/user-stories.md)
+[See Initial Wireframe](/planning/wireframe.jpg)
+
 ### Future Improvements
 - Add a user table so if there are multiple users, a user can filter on only their activities
 - Add edit functionality to both backend and frontend apps to allow the user to edit an activity.
