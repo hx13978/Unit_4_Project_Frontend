@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const backendUrl =
   process.env.REACT_APP_BACKEND_URL || "http://localhost:3000/activities";
 
+  
 
 export default class App extends Component {
   constructor(props) {
