@@ -24,6 +24,7 @@ export default class App extends Component {
 
   getActivities = () => {
     axios.get(`${backendUrl}`).then((response) => {
+      console.log(response.data)
       this.setState({
         activities: response.data.activities,
       });
@@ -52,7 +53,7 @@ export default class App extends Component {
   }
 
   render() {
-        //console.log(this.state.activities);
+        console.log(this.state.activities);
     return (
       <div className="App">
         <div className="header">
