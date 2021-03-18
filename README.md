@@ -36,6 +36,7 @@ Upon loading the website, the user will be able to view their current Activity L
 ### User Stories and Wireframe
 
 [See User Stories Here](/planning/user-stories.md)
+
 [See Initial Wireframe](/planning/wireframe.jpg)
 
 ### Future Improvements
