@@ -10,6 +10,7 @@ Upon loading the website, the user will be able to view their current Activity L
 - React
 - React Router
 - Axios
+- Javascript
 - JSX
 - React Bootstrap
 
